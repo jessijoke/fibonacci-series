@@ -1,5 +1,17 @@
 function fibonacci(num) {
-  // type your code here
+  var placeholder = 0;
+  var lastNum = 0;
+  var currentNum = 0;
+  for (var i = 0; i <= num; i++) {
+    if (currentNum == 0) {
+      currentNum = 1;
+    } else {
+      placeholder = currentNum;
+      currentNum = lastNum + currentNum;
+      lastNum = placeholder;
+    }
+  }
+  return lastNum;
 }
 
 if (require.main === module) {
